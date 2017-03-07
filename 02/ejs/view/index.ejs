@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>好高光啊，今天我买了一个iphone<%= a %></h1>
+    <ul>
+        <% for(var i=0;i<news.length;i++){ %>
+            <% if(i==0){ %>
+                <li><span><%= news[i].id %></span><%= news[i].name %></li>
+            <% } %>
+        <% } %>
+    </ul>
+</body>
+</html>
