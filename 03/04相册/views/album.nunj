@@ -1,0 +1,25 @@
+{% extends "./public/parent.nunj" %}
+{% block main %}
+    <div class="container">
+        <ol class="breadcrumb">
+            <li><a href="/">全部相册</a></li>
+            <li class="active">{{ albumName }}</li>
+        </ol>
+        <div class="row">
+            {% if images[0] %}
+                {% for item in images  %}
+                    <div class="col-sm-2">
+                        <div class="thumbnail">
+                            <img src="{{ item.path }}" alt="">
+                            <div class="caption">
+                                <p><a href="{{ item.path }}" class="btn btn-primary" role="button">{{ item.name }}</a></p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="alert alert-danger" role="alert">对不起，没有任何数据</div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
