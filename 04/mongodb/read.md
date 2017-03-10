@@ -54,4 +54,6 @@ $lt/$lte/$gt/$gte/$ne，依次等价于</<=/>/>=/!=
      --$not表示取反，等同于SQL中的not。
      > db.test.find({"name": {"$not": {"$in":["stephen2","stephen1"]}}})
      { "_id" : ObjectId("4fd58ecbb9ac507e96276f1a"), "name" : "stephen", "age" : 35,"genda" : "male", "email" : "stephen@hotmail.com" }
+#拼量导入
+mongoimport --db itcast --collection student --drop --file c:\data.json
 
